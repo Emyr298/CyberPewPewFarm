@@ -4,23 +4,26 @@ import os
 
 CONFIG = {
     'DEBUG': os.getenv('DEBUG') == '1',
-
+    
     'TEAMS': {
-        f'Team #{i}': f'10.60.{i}.3'
-        for i in range(0, 10)
+        'BOT': '13.229.240.53',
     },
+    # 'TEAMS': {
+    #     f'Team #{i}': f'10.60.{i}.3'
+    #     for i in range(0, 10)
+    # },
+    
     # 'FLAG_FORMAT': r'CTF\.Moscow\{[a-zA-Z\.0-9_-]+\}',
     # 'FLAG_FORMAT': r'VolgaCTF{[\w-]*\.[\w-]*\.[\w-]*}',
-    'FLAG_FORMAT': r'[A-Z0-9]{31}=',
+    'FLAG_FORMAT': r'FLAG{[a-zA-Z\.0-9_-]+}',
 
     # 'SYSTEM_PROTOCOL': 'ructf_http',
     # 'SYSTEM_URL': 'http://monitor.ructfe.org/flags',
     # 'SYSTEM_TOKEN': '275_17fc104dd58d429ec11b4a5e82041cd2',
 
-    'SYSTEM_PROTOCOL': 'forcad_tcp',
-    'SYSTEM_HOST': '10.10.10.10',
-    'SYSTEM_PORT': '31337',
-    'TEAM_TOKEN': '4fdcd6e54faa8991',
+    'SYSTEM_PROTOCOL': 'amber_http',
+    'SYSTEM_URL': 'http://13.229.240.53:8000/post-flags',
+    
     # 'SYSTEM_PROTOCOL': 'volgactf',
     # 'SYSTEM_VALIDATOR': 'volgactf',
     # 'SYSTEM_HOST': 'final.volgactf.ru',
@@ -43,5 +46,5 @@ CONFIG = {
     'SERVER_PASSWORD': os.getenv('SERVER_PASSWORD') or '1234',
 
     # For all time-related operations
-    'TIMEZONE': 'Europe/Moscow',
+    'TIMEZONE': 'Asia/Jakarta',
 }
